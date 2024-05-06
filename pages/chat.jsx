@@ -3,7 +3,7 @@ import { Chat } from "../components/chat";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io.connect("http://192.168.217.83:5000");
+const socket = io.connect("https://online-chat-bf81.onrender.com/");
 
 export default function ChatPage({ nickname, setNickname }) {
   const [messages, setMessages] = useState([]);
