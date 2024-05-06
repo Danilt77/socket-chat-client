@@ -2,6 +2,7 @@ import "../styles/global.css";
 import { Roboto } from "next/font/google";
 import clsx from "clsx";
 import { useState } from "react";
+import Head from "next/head";
 
 const roboto = Roboto({
   weight: ["400", "700"],

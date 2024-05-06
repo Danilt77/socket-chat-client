@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 import { Chat } from "../components/chat";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
+import Head from "next/head";
 
-const socket = io.connect("https://online-chat-bf81.onrender.com/");
+const socket = io.connect("https://online-chat-bf81.onrender.com");
 
 export default function ChatPage({ nickname, setNickname }) {
   const [messages, setMessages] = useState([]);
@@ -53,6 +54,9 @@ export default function ChatPage({ nickname, setNickname }) {
 
   return (
     <div className="flex align-middle h-full">
+      <Head>
+        <title>Чат</title>
+      </Head>
       <Chat
         nickname={nickname}
         setNickname={setNickname}
